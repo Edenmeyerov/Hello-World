@@ -1,6 +1,13 @@
-
 // Import the required modules
 const express = require('express');
+
+// Check if Express is installed
+try {
+    require.resolve('express');
+} catch (e) {
+    console.error('Express module is not installed. Run "npm install express" before running this script.');
+    process.exit(1);
+}
 
 // Create an instance of an Express application
 const app = express();
